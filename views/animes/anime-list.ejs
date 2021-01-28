@@ -1,0 +1,58 @@
+<%- include("../partials/header") %>
+    <%- include("../partials/navbar", isLogin) %>
+
+        <div class="container">
+            <h1>anime list</h1>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">No.</th>
+                    <th scope="col">Image</th>
+                    <th scope="col" style="width: 10rem">Title</th>
+                    <th scope="col" style="width: 30rem">Synopsis</th>
+                    <th scope="col">Rating</th>
+                    <th scope="col">Restriction</th>
+                    <% if(isLogin) { %>
+                        <th scope="col">Your Age</th>
+                        <th scope="col">Action</th>
+                    <% } else { %>
+                        <th scope="col">Released Year</th>
+                        <th scope="col">writer</th>
+                    <% } %>
+                </tr>
+                </thead>
+                <tbody>
+                    <% animes.forEach((anime, index) => { %>
+                        <tr>
+                            <th scope="row"><%= index+1 %></th>
+                            <td><img width="150px" src="<%= anime.image %>"></td>
+                            <td style="width: 10rem"><%= anime.title %></td>
+                            <td style="width: 30rem;"><%= anime.synopsis.substring(0, 255) %> . . . </td>
+                            <td style="width: 8rem"><%= anime.rating.toFixed(2) %> from <%= anime.totalRater %></td>
+                            <td><%= anime.restriction %>+</td>
+                            <% if(isLogin) { %>
+                                <td  style="width: 6rem"><%= anime.age %></td>
+                                <% if(anime.id !== anime.animeId && anime.restriction <= anime.age) { %>
+                                <td style="width: 19rem;">
+    <!--                                <a href="/anime-list/id/edit"><button type="button" class="btn btn-primary">edit</button></a>-->
+    <!--                                <a href="/anime-list/id/delete"><button type="button" class="btn btn-primary" onclick="return isDelete();">delete</button></a>-->
+                                    <a href="/anime-list/<%= anime.id %>/add-favorite"><button type="button" class="btn btn-primary">add favorit</button></a>
+                                </td>
+                                <% } %>
+                            <% } else { %>
+                                <td><%= anime.released_year %></td>
+                                <td><%= anime.writer %></td>
+                            <% } %>
+
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        </div>
+        <script>
+            function isDelete() {
+                return confirm("Are you sure want to delete {this.anime_title}?")
+            }
+        </script>
+
+<%- include("../partials/footer") %>

@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Action"
+  },
+  {
+    "name": "Adventure"
+  },
+  {
+    "name": "Comedy"
+  },
+  {
+    "name": "Romance"
+  },
+  {
+    "name": "Drama"
+  },
+  {
+    "name": "Shounen"
+  },
+  {
+    "name": "Fantasy"
+  },
+  {
+    "name": "Ecchi"
+  },
+  {
+    "name": "Hentai"
+  },
+  {
+    "name": "Superpower"
+  },
+  {
+    "name": "Martial Arts"
+  },
+  {
+    "name": "Sci-Fi"
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "username": "khanz1",
+    "password": "anggaganteng",
+    "email": "angga@xavier.id",
+    "birth_date": "2000-06-02",
+    "questionId": 1,
+    "hint": "jojo",
+    "roleId": 3
+  },
+  {
+    "id": 2,
+    "username": "sonkaio",
+    "password": "kaioshin117",
+    "email": "shin@xavier.id",
+    "birth_date": "2000-06-02",
+    "questionId": 2,
+    "hint": "kaisan",
+    "roleId": 2
+  },
+  {
+    "id": 3,
+    "username": "hontarou",
+    "password": "orekski",
+    "email": "hotarou@xavier.id",
+    "birth_date": "2000-06-02",
+    "questionId": 2,
+    "hint": "anastassa",
+    "roleId": 2
+  },
+  {
+    "id": 4,
+    "username": "chitanda",
+    "password": "kawaiiiinaa",
+    "email": "eru.chitanda@xavier.id",
+    "birth_date": "2000-06-02",
+    "questionId": 3,
+    "hint": "biru",
+    "roleId": 1
+  },
+  {
+    "id": 5,
+    "username": "megumin",
+    "password": "katobest",
+    "email": "kato@xavier.id",
+    "birth_date": "2000-06-02",
+    "questionId": 1,
+    "hint": "angga",
+    "roleId": 1
+  }
+]

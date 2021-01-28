@@ -1,0 +1,39 @@
+<%- include("../partials/header") %>
+    <%- include("../partials/navbar", isLogin, user) %>
+        <div class="container" style="background-color: aquamarine; width: 50rem; padding: 20px; border-radius: 5px;">
+            <div class="mb-3 row">
+                <label for="username" class="col-sm-2 col-form-label">Username</label>
+                <div class="col-sm-10">
+                    <input type="text" readonly class="form-control-plaintext" id="username" value="<%= user.username %>">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="email" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="text" readonly class="form-control-plaintext" id="email" value="<%= user.email %>">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="birth_date" class="col-sm-2 col-form-label">Birth Date</label>
+                <div class="col-sm-10">
+                    <input type="text" readonly class="form-control-plaintext" id="birth_date" value="<%= user.birth_date.toDateString() %>">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="is_verified" class="col-sm-2 col-form-label">Is Verified?</label>
+                <div class="col-sm-10">
+                    <input type="text" readonly class="form-control-plaintext" id="is_verified" value="<%= user.is_verified || false %>">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="role" class="col-sm-2 col-form-label">Role</label>
+                <div class="col-sm-10">
+                    <input type="text" readonly class="form-control-plaintext" id="role" value="<%= user.Role.role %>">
+                </div>
+            </div>
+            <div style="display: flex; justify-content: flex-end;">
+                <a href="/reset-password" style="text-decoration: none;">reset password?</a>
+            </div>
+        </div>
+
+<%- include("../partials/footer") %>

@@ -1,0 +1,47 @@
+<%- include("../partials/header") %>
+<%- include("../partials/navbar", isLogin, user) %>
+
+<div class="container">
+    <h1>my anime list</h1>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">No.</th>
+            <th scope="col">Image</th>
+            <th scope="col" style="width: 10rem">Title</th>
+            <th scope="col" style="width: 30rem">Synopsis</th>
+            <th scope="col">Rating</th>
+            <th scope="col" style="width: 8rem">User Rating</th>
+            <th scope="col">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% animes.forEach((anime, index) => { %>
+            <tr>
+                <th scope="row"><%= index+1 %></th>
+                <td><img width="150px" src="<%= anime.image %>"></td>
+                <td style="width: 10rem"><%= anime.title %></td>
+                <td style="width: 30rem;"><%= anime.synopsis.substring(0, 255) %> . . . </td>
+                <td style="width: 8rem"><%= anime.rating.toFixed(2) %> from <%= anime.totalRater %></td>
+                <td style="width: 8rem">
+                    <% if(anime.user_rating) { %>
+                        <%= anime.user_rating %>
+                </td>
+                <td style="width: 19rem;">
+                    <a href="/my-anime-list/<%= anime.id %>/edit-rating"><button type="button" class="btn btn-primary">edit rating</button></a>
+                    <% } else { %>
+                            no rating
+                </td>
+                <td style="width: 19rem;">
+                    <a href="/my-anime-list/<%= anime.id %>/add-rating"><button type="button" class="btn btn-primary">add rating</button></a>
+                    <% } %>
+                    <a href="/my-anime-list/<%= anime.id %>/delete-rating"><button type="button" class="btn btn-primary">remove rating</button></a>
+                    <a href="/my-anime-list/<%= anime.id %>/delete-favorite"><button type="button" class="btn btn-primary">remove favorit</button></a>
+                </td>
+            </tr>
+        <% }) %>
+        </tbody>
+    </table>
+</div>
+
+<%- include("../partials/footer") %>

@@ -1,0 +1,140 @@
+[
+  {
+    "id": 1,
+    "userId": 1,
+    "animeId": 1,
+    "user_rating": 8
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "animeId": 2,
+    "user_rating": 8.2
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "animeId": 4,
+    "user_rating": 8.8
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "animeId": 8,
+    "user_rating": 9
+  },
+  {
+    "id": 5,
+    "userId": 1,
+    "animeId": 10,
+    "user_rating": 8.8
+  },
+  {
+    "id": 6,
+    "userId": 1,
+    "animeId": 7,
+    "user_rating": 8.2
+  },
+  {
+    "id": 7,
+    "userId": 2,
+    "animeId": 2,
+    "user_rating": 7.7
+  },
+  {
+    "id": 8,
+    "userId": 2,
+    "animeId": 4,
+    "user_rating": 8.7
+  },
+  {
+    "id": 9,
+    "userId": 2,
+    "animeId": 6,
+    "user_rating": 8.8
+  },
+  {
+    "id": 10,
+    "userId": 2,
+    "animeId": 10,
+    "user_rating": 8.2
+  },
+  {
+    "id": 11,
+    "userId": 3,
+    "animeId": 1,
+    "user_rating": 8.4
+  },
+  {
+    "id": 12,
+    "userId": 3,
+    "animeId": 3,
+    "user_rating": 9
+  },
+  {
+    "id": 13,
+    "userId": 3,
+    "animeId": 5,
+    "user_rating": 8.8
+  },
+  {
+    "id": 14,
+    "userId": 3,
+    "animeId": 9,
+    "user_rating": 8.2
+  },
+  {
+    "id": 15,
+    "userId": 4,
+    "animeId": 1,
+    "user_rating": 8
+  },
+  {
+    "id": 16,
+    "userId": 4,
+    "animeId": 2,
+    "user_rating": 8.8
+  },
+  {
+    "id": 17,
+    "userId": 4,
+    "animeId": 3,
+    "user_rating": 8.6
+  },
+  {
+    "id": 18,
+    "userId": 4,
+    "animeId": 4,
+    "user_rating": 9
+  },
+  {
+    "id": 19,
+    "userId": 4,
+    "animeId": 5,
+    "user_rating": 8.5
+  },
+  {
+    "id": 20,
+    "userId": 5,
+    "animeId": 6,
+    "user_rating": 8.2
+  },
+  {
+    "id": 21,
+    "userId": 5,
+    "animeId": 7,
+    "user_rating": 8.9
+  },
+  {
+    "id": 22,
+    "userId": 5,
+    "animeId": 8,
+    "user_rating": 9.2
+  },
+  {
+    "id": 23,
+    "userId": 5,
+    "animeId": 9,
+    "user_rating": 7.7
+  }
+]

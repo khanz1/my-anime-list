@@ -1,0 +1,25 @@
+<%- include("../partials/header") %>
+    <%- include("../partials/navbar") %>
+
+        <div class="container" style="display: flex; flex-direction: column; height: 70vh; justify-content: center; align-items: center;" >
+            <h2 >add rating to <%= anime.title %></h2>
+            <form action="/my-anime-list/<%= anime.id %>/edit-rating" method="POST" style="background-color: aquamarine; width: 30rem; padding: 30px; height: 10rem; border-radius: 10px;">
+                <div class="mb-3">
+                    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" id="user_rating" name="user_rating">
+                        <option <% if(anime.user_rating === 10) { %> selected <% } %> value="10">10 - Master Piece</option>
+                        <option <% if(anime.user_rating === 9) { %> selected <% } %> value="9">9 - Great</option>
+                        <option <% if(anime.user_rating === 8) { %> selected <% } %> value="8">8 - Very Good</option>
+                        <option <% if(anime.user_rating === 7) { %> selected <% } %> value="7">7 - Good</option>
+                        <option <% if(anime.user_rating === 6) { %> selected <% } %> value="6">6 - Fine</option>
+                        <option <% if(anime.user_rating === 5) { %> selected <% } %> value="5">5 - Average</option>
+                        <option <% if(anime.user_rating === 4) { %> selected <% } %> value="4">4 - Bad</option>
+                        <option <% if(anime.user_rating === 3) { %> selected <% } %> value="3">3 - Very Bad</option>
+                        <option <% if(anime.user_rating === 2) { %> selected <% } %> value="2">2 - Horrible</option>
+                        <option <% if(anime.user_rating === 1) { %> selected <% } %> value="1">1 - Appailing</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Edit rating</button>
+                <a href="/my-anime-list"><button type="button" class="btn btn-primary">Cancel</button></a>
+            </form>
+        </div>
+<%- include("../partials/footer") %>

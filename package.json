@@ -1,0 +1,35 @@
+{
+  "name": "MyAnimeList",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node app.js",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khanz1/my-anime-list.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/khanz1/my-anime-list/issues"
+  },
+  "homepage": "https://github.com/khanz1/my-anime-list#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "nodemailer": "^6.4.17",
+    "pg": "^8.5.1",
+    "sequelize": "^6.4.0",
+    "validator": "^10.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7",
+    "sequelize-cli": "^6.2.0"
+  }
+}

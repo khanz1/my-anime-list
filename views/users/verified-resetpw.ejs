@@ -1,0 +1,22 @@
+<%- include("../partials/header") %>
+    <%- include("../partials/navbar", isLogin = false) %>
+
+        <div class="container" style="background-color: aquamarine; width: 50%; padding: 50px; height: 50%; border-radius: 10px;">
+            <form action="/reset-password/<%= user.id %>/verified" method="POST">
+                <% if(errors) { %> <%- include("../partials/errors", errors) %> <% } %>
+                    <div class="mb-3 row">
+                        <label for="username" class="col-sm-2 col-form-label">For User: </label>
+                        <div class="col-sm-10">
+                            <input type="text" readonly class="form-control-plaintext" id="username" value="<%= user.username %>">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">New Password</label>
+                        <input type="password" class="form-control" id="password" name="password">
+                    </div>
+                <button type="submit" class="btn btn-primary">Reset</button>
+                <a href="/"><button type="button" class="btn btn-primary">Cancel</button></a>
+            </form>
+        </div>
+
+<%- include("../partials/footer") %>

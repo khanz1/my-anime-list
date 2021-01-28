@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">Home</a>
+        <a class="navbar-brand" aria-current="page" href="/anime-list">Anime List</a>
+        <% if(isLogin) { %>
+            <a class="navbar-brand" aria-current="page" href="/my-anime-list">My Anime List</a>
+        <% } %>
+      <div class="collapse navbar-collapse" id="navbarNav" style="display: flex; justify-content: flex-end;">
+        <ul class="navbar-nav">
+          <div style="display: flex; flex-direction: row; justify-content: flex-end;">
+              <% if(isLogin) { %>
+                  <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="/user/<%= user.id %>"><%= user.username %></a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="/logout">logout</a>
+                  </li>
+              <% } else { %>
+                      <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="/register">register</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="/login">login</a>
+                      </li>
+              <% }%>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </nav>
