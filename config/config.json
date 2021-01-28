@@ -14,10 +14,12 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "postgres",
-    "password": "Anggaz117",
-    "database": "my-anime-list",
-    "host": "localhost",
+    "username": "ufxzyoagiflmqz",
+    "password": "d7e184aaa1ad10ff331da9143fe5530cd7c2a5c1c5bcbb9c86d00d40b6f37d30",
+    "database": "dapo8f37l79pjd",
+    "host": "ec2-54-84-238-74.compute-1.amazonaws.com",
+    "port": 5432,
+    "URI": "postgres://ufxzyoagiflmqz:d7e184aaa1ad10ff331da9143fe5530cd7c2a5c1c5bcbb9c86d00d40b6f37d30@ec2-54-84-238-74.compute-1.amazonaws.com:5432/dapo8f37l79pjd",
     "dialect": "postgres"
   }
 }
