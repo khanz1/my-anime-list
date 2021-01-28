@@ -16,7 +16,7 @@ class MyFunction {
                 from: 'my.xavierbot@outlook.com',
                 to: email,
                 subject: "You have created an account from MyAnimeList by Angga. ^_^",
-                text: `To verify please this link http://localhost:4004/user/${userId}/verified`
+                text: `To verify please this link http://https://my-anime-list-app.herokuapp.com/user/${userId}/verified`
             }
             return new Promise((resolve, reject) => {
                 transporter.sendMail(option, (err, info) => {

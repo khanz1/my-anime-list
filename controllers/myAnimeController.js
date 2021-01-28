@@ -34,14 +34,14 @@ class MyAnimeController {
                 })
                 res.render("animes/my-anime-list", { animes: result, isLogin: !!req.session.userId, user })
             })
-            .catch(err => res.send(err))
+            .catch(err => res.render("error-page", { errors: err.message }))
     }
 
     static getAddRating(req, res) {
         let animeId = req.params.animeId
         Anime.findByPk(animeId)
             .then(anime => res.render("animes/add-rating", { anime }))
-            .catch(err => res.send(err));
+            .catch(err => res.render("error-page", { errors: err.message }));
     }
 
     static addRating(req, res) {
@@ -50,7 +50,7 @@ class MyAnimeController {
         let { user_rating } = req.body;
         AnimeUser.update({ user_rating }, { where: { userId, animeId } })
             .then(() => res.redirect("/my-anime-list"))
-            .catch(err => res.send(err));
+            .catch(err => res.render("error-page", { errors: err.message }));
     }
     
     static getEditRating(req, res) {
@@ -64,7 +64,7 @@ class MyAnimeController {
                 result.user_rating = anime.AnimeUsers[0].user_rating;
                 res.render("animes/edit-rating", { anime: result })
             })
-            .catch(err => res.send(err))
+            .catch(err => res.render("error-page", { errors: err.message }))
     }
 
     static editRating(req, res) {
@@ -73,7 +73,7 @@ class MyAnimeController {
         let { user_rating } = req.body;
         AnimeUser.update({ user_rating }, { where: { animeId, userId } })
             .then(() => res.redirect("/my-anime-list"))
-            .catch(err => res.send(err));
+            .catch(err => res.render("error-page", { errors: err.message }));
     }
 
     static getDeleteRating(req, res) {
@@ -81,7 +81,7 @@ class MyAnimeController {
         let userId = req.session.userId;
         AnimeUser.update({ user_rating: null }, { where: { userId, animeId } })
             .then(() => res.redirect("/my-anime-list"))
-            .catch(err => res.send(err))
+            .catch(err => res.render("error-page", { errors: err.message }))
     }
 
     static getDeleteFavorite(req, res) {
@@ -89,7 +89,7 @@ class MyAnimeController {
         let userId = req.session.userId;
         AnimeUser.destroy({ where: { userId, animeId } })
             .then(() => res.redirect("/my-anime-list"))
-            .catch(err => res.send(err));
+            .catch(err => res.render("error-page", { errors: err.message }));
     }
 }
 

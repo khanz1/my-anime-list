@@ -9,6 +9,17 @@ class UserController {
         res.render("users/reset-password", { errors })
     }
 
+    static sendVerificationEmail(req, res) {
+        let id = Number(req.params.userId);
+        User.findByPk(id)
+            .then(user => {
+                return MyFunction.sendRegistrationEmail(user.email, user.id)
+            })
+            .then(() => User.findByPk(id))
+            .then((user) => res.render("users/edit-user", { isLogin: true, user }))
+            .catch(err => res.render("error-page", { errors: err.message }))
+    }
+
     static getVerifiedResetPw(req, res) {
         let id = req.params.userId;
         User.findByPk(id)
@@ -26,7 +37,7 @@ class UserController {
         password = hashing(password)
         User.update({ password }, { where: { id } })
             .then(() => res.redirect("/login"))
-            .catch(err => res.send(err));
+            .catch(err => res.render("error-page", { errors: err.message }));
     }
 
     static resetPassword(req, res) {
@@ -49,7 +60,7 @@ class UserController {
         let userId = req.session.userId;
         User.findByPk(userId, { include: Role })
             .then(user => res.render("users/edit-user", { isLogin: true, user }))
-            .catch(err => res.send(err));
+            .catch(err => res.render("error-page", { errors: err.message }));
     }
 
     static verified(req, res) {
@@ -57,7 +68,7 @@ class UserController {
 
         User.update({ is_verified: true }, { where: { id: userId } })
             .then(() => res.redirect("/login"))
-            .catch(err => res.send(err))
+            .catch(err => res.render("error-page", { errors: err.message }))
     }
 
     static home(req, res) {
@@ -147,7 +158,7 @@ class UserController {
                 })
                 res.render("animes/my-anime-list", { animes: result })
             })
-            .catch(err => res.send(err))
+            .catch(err => res.render("error-page", { errors: err.message }))
     }
 }
 

@@ -35,7 +35,7 @@ class AnimeController {
                     });
                     res.render("animes/anime-list", { animes: result, isLogin:true, user })
                 })
-                .catch(err => res.send(err.message))
+                .catch(err => res.render("error-page", { errors: err.message }))
         } else {
             Anime.findAll({
                 include: {
@@ -48,7 +48,7 @@ class AnimeController {
                 }
             })
                 .then(result => res.render("animes/anime-list", { animes: result, isLogin: false, user: null }))
-                .catch(err => res.send(err));
+                .catch(err => res.render("error-page", { errors: err.message }));
 
         }
     }
@@ -58,7 +58,7 @@ class AnimeController {
         let userId = req.session.userId;
         AnimeUser.create({ userId, animeId })
             .then(() => res.redirect("/anime-list"))
-            .catch(err => res.send(err))
+            .catch(err => res.render("error-page", { errors: err.message }))
     }
 }
 

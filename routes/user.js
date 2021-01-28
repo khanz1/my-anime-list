@@ -6,5 +6,6 @@ const UserController = require("../controllers/userController")
 
 userRouter.get("/:userId", mid, UserController.userDetail);
 userRouter.get("/:userId/verified", UserController.verified);
+userRouter.get("/:userId/send-verification-email", UserController.sendVerificationEmail)
 
 module.exports = userRouter;
