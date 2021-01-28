@@ -1,4 +1,4 @@
-const { Anime, AnimeUser, User, Sequelize } = require('../models')
+const { Anime, AnimeUser, User, Sequelize, Role } = require('../models')
 const { gt } = Sequelize.Op
 const MyFunction = require("../helper/my-function");
 
@@ -20,7 +20,7 @@ class AnimeController {
             })
             let promise2 = AnimeUser.findAll({ where: { userId } })
             let promise3 = User.findByPk(req.session.userId);
-            Promise.all([promise1, promise2, promise3])
+            Promise.all([promise1, promise2, promise3, promise4])
                 .then(([animes, myAnimes, user]) => {
                     let result = animes.map(anime => {
                         let { id, title, image, synopsis, restriction } = anime;

@@ -3,7 +3,7 @@
 
         <div class="container" style="display: flex; flex-direction: column; height: 70vh; justify-content: center; align-items: center;" >
             <h2 >add rating to <%= anime.title %></h2>
-            <form action="/my-anime-list/<%= anime.id %>/edit-rating" method="POST" style="background-color: aquamarine; width: 30rem; padding: 30px; height: 10rem; border-radius: 10px;">
+            <form action="/my-anime-list/<%= anime.id %>/edit-rating" method="POST" style="background-color: rgb(202, 197, 197); width: 30rem; padding: 30px; height: 10rem; border-radius: 10px;">
                 <div class="mb-3">
                     <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" id="user_rating" name="user_rating">
                         <option <% if(anime.user_rating === 10) { %> selected <% } %> value="10">10 - Master Piece</option>
