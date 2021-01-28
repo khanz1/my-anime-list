@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const PORT = 4004;
+const PORT = process.env.PORT || 4004;
 const router = require("./routes");
 const session = require('express-session')
 
