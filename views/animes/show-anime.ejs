@@ -1,10 +1,10 @@
 <%- include("../partials/header") %>
 <%- include("../partials/navbar", isLogin, user) %>
 
-<div class="col" style="position: absolute">
+<div class="col" style="position: absolute; float: right">
     <img width="250px" src="<%= anime.image %>" alt="<%= anime.title %>">
 </div>
-<div class="container">
+<div class="container" style="width: 60%">
     <div class="row row-cols-4">
         <div class="col-9" style="display: flex; justify-content: center"><h1><%= anime.title %></h1></div>
         <div class="col-6">Writer: <%= anime.writer %></div>
