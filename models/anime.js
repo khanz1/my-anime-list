@@ -9,13 +9,6 @@ module.exports = (sequelize, DataTypes) => {
       Anime.hasMany(models.AnimeUser, { foreignKey: "animeId" })
       Anime.belongsTo(models.Genre, { foreignKey: "genreId" } )
     }
-
-    static titleParsing(title) {
-      return title
-          .toLowerCase()
-          .match(/\w+/ig)
-          .join("-")
-    }
   };
   Anime.init({
     title: DataTypes.STRING,

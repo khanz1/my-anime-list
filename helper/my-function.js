@@ -3,7 +3,12 @@ const nodemailer = require("nodemailer");
 
 class MyFunction {
 
-
+    static titleParsing(title) {
+        return title
+            .toLowerCase()
+            .match(/\w+/ig)
+            .join("-")
+    }
 
     static sendRegistrationEmail(email, userId) {
             let transporter = nodemailer.createTransport({

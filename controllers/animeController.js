@@ -23,7 +23,7 @@ class AnimeController {
                 .then(([animes, myAnimes, user]) => {
                     let result = animes.map(anime => {
                         let { id, title, image, synopsis, restriction } = anime;
-                        let titleParams = Anime.titleParsing(title);
+                        let titleParams = MyFunction.titleParsing(title);
                         let rating = anime.AnimeUsers.reduce((sum, animeUser) => { return sum + animeUser.user_rating }, 0)/anime.AnimeUsers.length;
                         let totalRater = anime.AnimeUsers.length;
                         let animeId;
@@ -49,7 +49,7 @@ class AnimeController {
             })
                 .then(result => {
                     result.forEach(anime => {
-                        anime.titleParams = Anime.titleParsing(anime.title);
+                        anime.titleParams = MyFunction.titleParsing(anime.title);
                         anime.rating = anime.AnimeUsers.reduce((sum, animeUser) => { return sum + animeUser.user_rating }, 0)/anime.AnimeUsers.length;
                         anime.totalRater = anime.AnimeUsers.length;
                     })
@@ -72,7 +72,7 @@ class AnimeController {
         Anime.findAll({ include: [Genre, { model: AnimeUser, where: { user_rating: { [gt]:0 } }}] })
             .then(animes => {
                 animes.forEach(anime => {
-                    let titleParamsDb = Anime.titleParsing(anime.title)
+                    let titleParamsDb = MyFunction.titleParsing(anime.title)
                     let isMatch = (titleParamsDb === req.params.titleParams)
                     if(isMatch) {
                         let isLogin = !!req.session.userId;
