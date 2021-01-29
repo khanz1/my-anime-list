@@ -1,0 +1,20 @@
+<%- include("../partials/header") %>
+<%- include("../partials/navbar", isLogin, user) %>
+
+<div class="col" style="position: absolute">
+    <img width="250px" src="<%= anime.image %>" alt="<%= anime.title %>">
+</div>
+<div class="container">
+    <div class="row row-cols-4">
+        <div class="col-9" style="display: flex; justify-content: center"><h1><%= anime.title %></h1></div>
+        <div class="col-6">Writer: <%= anime.writer %></div>
+        <div class="col-6">Restriction: <%= anime.restriction %></div>
+        <div class="col-6">Released Year: <%= anime.released_year %></div>
+        <div class="col-6">Type: <%= anime.type %></div>
+        <div class="col-6">Genre: <%= anime.genre %></div>
+        <div class="col-6">Rating: <%= anime.rating.toFixed(2) %> from <%= anime.userRaters %></div>
+        <div class="col-12"><%= anime.synopsis %>></div>
+    </div>
+</div>
+
+<%- include("../partials/footer") %>

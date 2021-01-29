@@ -26,7 +26,9 @@
                         <tr>
                             <th scope="row"><%= index+1 %></th>
                             <td><img width="150px" src="<%= anime.image %>"></td>
-                            <td style="width: 10rem"><%= anime.title %></td>
+                            <td style="width: 10rem">
+                                <a href="/anime-list/<%= anime.titleParams %>" style="text-decoration: none"><%= anime.title %></a>
+                            </td>
                             <td style="width: 30rem;"><%= anime.synopsis.substring(0, 255) %> . . . </td>
                             <td style="width: 8rem"><%= anime.rating.toFixed(2) %> from <%= anime.totalRater %></td>
                             <td><%= anime.restriction %>+</td>

@@ -42,7 +42,6 @@ class UserController {
 
     static resetPassword(req, res) {
         let { username, questionId, hint } = req.body;
-        console.log(username, questionId, hint)
         User.findOne({ where: { username } })
             .then(user => {
                 if(Number(questionId) !== user.questionId || hint !== user.hint) {

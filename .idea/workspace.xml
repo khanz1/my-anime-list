@@ -2,19 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be8ca467-79a0-4572-a220-ac5001a0f475" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1b730786-4789-40ca-8086-f96e03b0fa3f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1b730786-4789-40ca-8086-f96e03b0fa3f.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/animeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/animeController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/animes/add-rating.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/animes/add-rating.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/animes/edit-anime.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/animes/edit-anime.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/animes/edit-rating.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/animes/edit-rating.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/partials/navbar.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/navbar.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/users/edit-user.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/users/edit-user.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/users/login.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/users/login.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/users/register.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/users/register.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/users/reset-password.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/users/reset-password.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/users/verified-resetpw.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/users/verified-resetpw.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/userController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/my-function.js" beforeDir="false" afterPath="$PROJECT_DIR$/helper/my-function.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/anime-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/anime-list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/animes/add-anime.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/animes/add-anime.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/animes/anime-list.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/animes/anime-list.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/home.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/home.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/partials/footer.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/footer.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +43,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1611862708310</updated>
-      <workItem from="1611862710321" duration="9040000" />
+      <workItem from="1611862710321" duration="15828000" />
     </task>
     <servers />
   </component>
